@@ -167,3 +167,5 @@ catboost_info
 
 # MacOS
 .DS_Store
+
+recsys/raw_data_sources/dataset/
