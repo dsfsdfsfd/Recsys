@@ -44,4 +44,8 @@ def fill_missing_club_member_status(df: pl.DataFrame) -> pl.DataFrame:
     "Fill missing values in the 'club_member_status' column with 'ABSENT'. "
     return df.with_columns(pl.col("club_member_status").fill_null("ABSENT"))
 
+def drop_na_age(df: pl.DataFrame) -> pl.DataFrame:
+    "Drop rows with null values in the 'age' column"
+    return df.drop_nulls(subset=["age"])
+
 
