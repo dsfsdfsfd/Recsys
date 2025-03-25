@@ -1,21 +1,29 @@
 [project]
-name = "recsys"
+name = "hands-on-recommender-system"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = "~=3.11"
 dependencies = [
-    "loguru>=0.7.3",
-    "polars>=1.26.0",
-    "pydantic>=2.10.6",
-    "pydantic-settings>=2.8.1",
-    "sentence-transformers>=3.4.1",
+    "altair>=4.2.2",
+    "catboost==1.2",
+    "hopsworks[python]>=4.1.2",
+    "huggingface-hub==0.24.7",
+    "ipykernel>=6.29.5",
+    "langchain-openai==0.1.14",
+    "langchain==0.2.6",
+    "loguru>=0.7.2",
+    "nbformat>=5.10.4",
+    "polars==1.9.0",
+    "pydantic-settings>=2.6.1",
+    "sentence-transformers==2.2.2",
+    "streamlit==1.28.2",
+    "tensorflow-recommenders==0.7.2",
+    "tensorflow==2.14",
+    "pyproject-toml>=0.0.12",
 ]
 
 [dependency-groups]
 dev = [
-    "ipykernel>=6.29.5",
+    "ruff>=0.7.2",
 ]
-
-[tool.setuptools]
-packages = ["recsys"]  # Chỉ định package cần cài đặt

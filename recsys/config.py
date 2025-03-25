@@ -12,7 +12,6 @@ class Setting(BaseSettings):
 
     #feature engineering
     CUSTOM_DATA_SIZE: CustomDatasetSize = CustomDatasetSize.SMALL
-    FEATURES_EMBEDDING_MODEL_ID: str = "all-MiniLM-L6-v2"
-
+    FEATURES_EMBEDDING_MODEL_ID: str = '/home/u22/Recsys/recsys/raw_data_sources/dataset/all-MiniLM-L12-v2/local_model'
 
 setting = Setting()
