@@ -1,8 +1,6 @@
 import numpy as np
 import pandas as pd
 import polars as pl
-from hopsworks import udf
-
 
 def convert_article_id_to_str(df: pl.DataFrame) -> pl.Series:
     "Convert the 'article_id' column to string type"
@@ -42,12 +40,10 @@ def convert_t_dat_to_epoch_milliseconds(df: pl.DataFrame) -> pl.Series:
     "Convert the 't_dat' column to epoch milliseconds."
     return df["t_dat"].cast(pl.Int64) // 1_000_000
 
-@udf(return_type = float, mode="pandas")
 def month_sin(month :pd.Series):
     "On-demand transformation function that sine of month for cyclical feature encoding."
     return np.sin(month * (2 * np.pi / 12))
 
-@udf(return_type = float, mode="pandas")
 def month_cos(month :pd.Series):
     return np.cos(month * (2 * np.pi / 12))
     

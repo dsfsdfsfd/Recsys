@@ -25,7 +25,6 @@ dependencies = [
     "types-tqdm>=4.67.0.20250319",
     "minio>=7.2.15",
     "feast>=0.47.0",
-    "hopsworks[python]>=4.1.8",
 ]
 
 [dependency-groups]
