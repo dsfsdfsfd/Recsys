@@ -1,4 +1,5 @@
-from hsfs.feature import Feature
+from feast import Field
+from feast.types import Int64, String, Float64, Array
 
 ### Post ingestion format.###
 
@@ -86,117 +87,116 @@ ranking_feature_descriptions = [
 ### Pre ingestion format. ###
 
 article_feature_description = [
-    Feature(
-        name="article_id", type="string", description="Identifier for the article."
+    Field(
+        name="article_id", dtype=String, description="Identifier for the article."
     ),
-    Feature(
+    Field(
         name="product_code",
-        type="bigint",
+        dtype=Int64,
         description="Code associated with the product.",
     ),
-    Feature(name="prod_name", type="string", description="Name of the product."),
-    Feature(
+    Field(name="prod_name", dtype=String, description="Name of the product."),
+    Field(
         name="product_type_no",
-        type="bigint",
+        dtype=Int64,
         description="Number associated with the product type.",
     ),
-    Feature(
-        name="product_type_name", type="string", description="Name of the product type."
+    Field(
+        name="product_type_name", dtype=String, description="Name of the product type."
     ),
-    Feature(
+    Field(
         name="product_group_name",
-        type="string",
+        dtype=String,
         description="Name of the product group.",
     ),
-    Feature(
+    Field(
         name="graphical_appearance_no",
-        type="bigint",
+        dtype=Int64,
         description="Number associated with graphical appearance.",
     ),
-    Feature(
+    Field(
         name="graphical_appearance_name",
-        type="string",
+        dtype=String,
         description="Name of the graphical appearance.",
     ),
-    Feature(
+    Field(
         name="colour_group_code",
-        type="bigint",
+        dtype=Int64,
         description="Code associated with the colour group.",
     ),
-    Feature(
-        name="colour_group_name", type="string", description="Name of the colour group."
+    Field(
+        name="colour_group_name", dtype=String, description="Name of the colour group."
     ),
-    Feature(
+    Field(
         name="perceived_colour_value_id",
-        type="bigint",
+        dtype=Int64,
         description="ID associated with perceived colour value.",
     ),
-    Feature(
+    Field(
         name="perceived_colour_value_name",
-        type="string",
+        dtype=String,
         description="Name of the perceived colour value.",
     ),
-    Feature(
+    Field(
         name="perceived_colour_master_id",
-        type="bigint",
+        dtype=Int64,
         description="ID associated with perceived colour master.",
     ),
-    Feature(
+    Field(
         name="perceived_colour_master_name",
-        type="string",
+        dtype=String,
         description="Name of the perceived colour master.",
     ),
-    Feature(
+    Field(
         name="department_no",
-        type="bigint",
+        dtype=Int64,
         description="Number associated with the department.",
     ),
-    Feature(
-        name="department_name", type="string", description="Name of the department."
+    Field(
+        name="department_name", dtype=String, description="Name of the department."
     ),
-    Feature(
-        name="index_code", type="string", description="Code associated with the index."
+    Field(
+        name="index_code", dtype=String, description="Code associated with the index."
     ),
-    Feature(name="index_name", type="string", description="Name of the index."),
-    Feature(
+    Field(name="index_name", dtype=String, description="Name of the index."),
+    Field(
         name="index_group_no",
-        type="bigint",
+        dtype=Int64,
         description="Number associated with the index group.",
     ),
-    Feature(
-        name="index_group_name", type="string", description="Name of the index group."
+    Field(
+        name="index_group_name", dtype=String, description="Name of the index group."
     ),
-    Feature(
+    Field(
         name="section_no",
-        type="bigint",
+        dtype=Int64,
         description="Number associated with the section.",
     ),
-    Feature(name="section_name", type="string", description="Name of the section."),
-    Feature(
+    Field(name="section_name", dtype=String, description="Name of the section."),
+    Field(
         name="garment_group_no",
-        type="bigint",
+        dtype=Int64,
         description="Number associated with the garment group.",
     ),
-    Feature(
+    Field(
         name="garment_group_name",
-        type="string",
+        dtype=String,
         description="Name of the garment group.",
     ),
-    Feature(
+    Field(
         name="prod_name_length",
-        type="bigint",
+        dtype=Int64,
         description="Length of the product name.",
     ),
-    Feature(
+    Field(
         name="article_description",
-        type="string",
-        online_type="VARCHAR(5800)",
+        dtype=String,
         description="Description of the article.",
     ),
-    Feature(
+    Field(
         name="embeddings",
-        type="array<double>",
+        dtype=Array(Float64),
         description="Vector embeddings of the article description.",
     ),
-    Feature(name="image_url", type="string", description="URL of the product image."),
+    Field(name="image_url", dtype=String, description="URL of the product image."),
 ]
