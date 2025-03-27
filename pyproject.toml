@@ -23,6 +23,9 @@ dependencies = [
     "pandas-stubs>=2.2.3.250308",
     "mlflow>=2.21.1",
     "types-tqdm>=4.67.0.20250319",
+    "minio>=7.2.15",
+    "feast>=0.47.0",
+    "hopsworks[python]>=4.1.8",
 ]
 
 [dependency-groups]
